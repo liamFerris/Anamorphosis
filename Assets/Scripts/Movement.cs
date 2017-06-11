@@ -10,7 +10,7 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
-        v = new Vector3(Random.value, Random.value, Random.value);
+        v = new Vector3(0, Random.value, 0);
         i = transform.position;
         Invoke("go", 2);
     }
@@ -18,7 +18,7 @@ public class Movement : MonoBehaviour
     void Update()
     {
         if (ready)
-            transform.RotateAround(new Vector3(150, 0, 0), v, 0.75f);
+            transform.RotateAround(new Vector3(200, 50, 0), v, 0.75f);
         if (ready && transform.position == i)
         {
             ready = false;
